@@ -144,6 +144,7 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
+.post-meta,
 .post-card-meta,
 .post-header-meta {
   display: flex;

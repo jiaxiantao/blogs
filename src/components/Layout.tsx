@@ -1,4 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
+import { SITE } from '../constants/site';
 
 export function Layout() {
   return (
@@ -8,15 +9,15 @@ export function Layout() {
           <Link to="/" className="brand">
             <span className="brand-mark">M</span>
             <span>
-              <strong>牧艺的技术博客</strong>
-              <small>前端 · 3D · AI Agent</small>
+              <strong>{SITE.title}</strong>
+              <small>{SITE.subtitle}</small>
             </span>
           </Link>
           <nav className="header-nav">
-            <a href="https://juejin.cn/user/3958672823687880" target="_blank" rel="noreferrer">
+            <a href={SITE.links.juejin} target="_blank" rel="noreferrer">
               掘金
             </a>
-            <a href="https://github.com/jiaxiantao" target="_blank" rel="noreferrer">
+            <a href={SITE.links.github} target="_blank" rel="noreferrer">
               GitHub
             </a>
           </nav>
@@ -29,7 +30,12 @@ export function Layout() {
 
       <footer className="site-footer">
         <div className="container">
-          <p>© {new Date().getFullYear()} 牧艺 · 基于 Vite 构建 · 部署于 GitHub Pages</p>
+          <p>
+            © {new Date().getFullYear()} {SITE.author} · 基于 Vite 构建 ·{' '}
+            <a href={SITE.links.repo} target="_blank" rel="noreferrer">
+              GitHub Pages
+            </a>
+          </p>
         </div>
       </footer>
     </div>

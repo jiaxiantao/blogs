@@ -1,52 +1,92 @@
 # 牧艺的技术博客
 
-基于 Vite + React 构建的个人技术博客站点，文章源码存放在 `blogs/` 目录，部署在 GitHub Pages。
+个人技术博客站点，聚合我在掘金发布的文章，涵盖前端工程、3D 可视化、AI Agent 等主题。
 
-## 本地开发
+**在线访问**：[https://jiaxiantao.github.io/blogs/](https://jiaxiantao.github.io/blogs/)  
+**掘金主页**：[juejin.cn/user/3958672823687880](https://juejin.cn/user/3958672823687880)
+
+## 技术栈
+
+- [Vite](https://vite.dev/) + [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/) — 客户端路由
+- [marked](https://marked.js.org/) + [DOMPurify](https://github.com/cure53/DOMPurify) — Markdown 渲染与安全过滤
+- [pnpm](https://pnpm.io/) — 包管理
+- [GitHub Actions](https://github.com/features/actions) + [GitHub Pages](https://pages.github.com/) — 自动构建与部署
+
+## 快速开始
 
 ```bash
+# 安装依赖
 pnpm install
+
+# 本地开发（默认 http://localhost:5173/blogs/）
 pnpm dev
-```
 
-## 构建
-
-```bash
+# 生产构建
 pnpm build
+
+# 预览构建产物
 pnpm preview
 ```
 
-## 目录结构
+## 项目结构
 
 ```text
-blogs/          # Markdown 文章
-src/            # 前端站点源码
-.github/        # GitHub Actions 自动部署
+blogs/                    # Markdown 文章（构建时自动加载）
+src/
+  components/               # 布局、文章卡片、Markdown 渲染
+  constants/site.ts         # 站点名称、链接等配置
+  data/posts.ts             # 文章索引
+  lib/markdown.ts           # Markdown 解析与消毒
+  pages/                    # 首页、文章详情页
+  types/                    # 类型定义
+  utils/                    # 文章解析、路由工具
+.github/workflows/          # GitHub Actions 部署配置
 ```
 
-## 在线地址
+## 如何发布新文章
 
-部署完成后访问：
+1. 在 `blogs/` 目录新建 `.md` 文件（文件名即 URL slug）
+2. 文章开头建议包含标题与元信息：
 
-https://jiaxiantao.github.io/blogs/
+```markdown
+# 文章标题
 
-## 发布流程
+> 发布日期：2026-07-02  
+> 标签：前端 / Cursor / AI 编程
 
-1. 将新文章放入 `blogs/` 目录
-2. 提交并推送到 `main` 分支
-3. GitHub Actions 自动构建并发布到 GitHub Pages
+## 正文从这里开始
+```
 
-## GitHub Pages 配置（重要）
+3. 提交并推送到 `main` 分支，GitHub Actions 会自动构建并部署
 
-本项目使用 **GitHub Actions** 部署，不要用「从分支部署」。
+```bash
+git add blogs/你的新文章.md
+git commit -m "新增文章：xxx"
+git push origin main
+```
 
-请在仓库设置中确认：
+部署进度可在 [Actions](https://github.com/jiaxiantao/blogs/actions) 查看。
 
-1. 打开 [Settings → Pages](https://github.com/jiaxiantao/blogs/settings/pages)
-2. **Build and deployment → Source** 选择 **GitHub Actions**（不是 Deploy from a branch）
-3. 保存后，到 [Actions](https://github.com/jiaxiantao/blogs/actions) 重新运行 `Deploy to GitHub Pages` 工作流
+## 部署说明
 
-如果 Source 误设为 `main` 分支的 `/docs` 目录，会出现两类错误：
+本项目通过 **GitHub Actions** 部署到 GitHub Pages，不使用「从分支部署」。
 
-- Actions 部署报 `404 Failed to create deployment`
-- Jekyll 构建报 `No such file or directory - /github/workspace/docs`
+仓库 Settings → Pages → **Source** 需设置为 **GitHub Actions**。推送 `main` 分支后，工作流 `Deploy to GitHub Pages` 会自动执行：
+
+```text
+pnpm install → pnpm build → 上传 dist/ → 发布到 GitHub Pages
+```
+
+## 文章系列
+
+| 主题 | 代表文章 |
+|------|---------|
+| AI 工程实践 | Cursor 使用复盘、MCP 工作流、Code Review 指南 |
+| 职业成长 | 不可替代竞争力、转型 AI Agent 工程师 |
+| 3D 可视化 | 快递仓储可视化、浏览器端 3D 看车 |
+| 开源项目 | cos-design 组件库、Home Agent 前端编排 |
+
+## License
+
+MIT

@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { MarkdownContent } from '../components/MarkdownContent';
+import { PostMeta } from '../components/PostMeta';
 import { getPostBySlug } from '../data/posts';
 
 export function PostPage() {
@@ -22,18 +23,7 @@ export function PostPage() {
         ← 返回列表
       </Link>
       <header className="post-header">
-        <div className="post-header-meta">
-          <time dateTime={post.date}>{post.date}</time>
-          {post.tags.length > 0 && (
-            <div className="tag-list">
-              {post.tags.map((tag) => (
-                <span key={tag} className="tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
+        <PostMeta date={post.date} tags={post.tags} />
         <h1>{post.title}</h1>
       </header>
       <MarkdownContent content={post.content} />

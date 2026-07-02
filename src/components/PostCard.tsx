@@ -1,30 +1,23 @@
 import { Link } from 'react-router-dom';
-import type { BlogPost } from '../data/posts';
+import type { BlogPost } from '../types/post';
+import { getPostPath } from '../utils/postPath';
+import { PostMeta } from './PostMeta';
 
 interface PostCardProps {
   post: BlogPost;
 }
 
 export function PostCard({ post }: PostCardProps) {
+  const postPath = getPostPath(post.slug);
+
   return (
     <article className="post-card">
-      <div className="post-card-meta">
-        <time dateTime={post.date}>{post.date}</time>
-        {post.tags.length > 0 && (
-          <div className="tag-list">
-            {post.tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
+      <PostMeta date={post.date} tags={post.tags} maxTags={3} />
       <h2>
-        <Link to={`/post/${encodeURIComponent(post.slug)}`}>{post.title}</Link>
+        <Link to={postPath}>{post.title}</Link>
       </h2>
       <p>{post.excerpt}</p>
-      <Link className="read-more" to={`/post/${encodeURIComponent(post.slug)}`}>
+      <Link className="read-more" to={postPath}>
         阅读全文 →
       </Link>
     </article>
