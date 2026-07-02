@@ -1,5 +1,6 @@
 # 3D 快递仓储可视化重磅升级：从静态看板到可漫游的 WMS 演示场
 
+> 发布日期：2026-06-26  
 > 开源项目：[3d-express-warehouse](https://github.com/jiaxiantao/3d-express-warehouse)\
 > 在线演示：<https://jiaxiantao.github.io/3d-express-warehouse/>\
 > 上一篇基础篇：[3D快递仓储可视化技术博客](https://juejin.cn/post/7654641623330209802)

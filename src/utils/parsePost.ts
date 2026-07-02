@@ -5,10 +5,13 @@ function extractTitle(lines: string[], fallback: string): string {
   return titleLine?.replace(/^#\s+/, '').trim() ?? fallback;
 }
 
-function extractDate(lines: string[]): string {
-  const metaLine = lines.find((line) => line.includes('发布日期'));
+function extractDate(lines: string[]): string | null {
+  const metaLine = lines
+    .slice(0, 30)
+    .find((line) => /发布日期/.test(line));
+
   const dateMatch = metaLine?.match(/(\d{4}-\d{2}-\d{2})/);
-  return dateMatch?.[1] ?? '1970-01-01';
+  return dateMatch?.[1] ?? null;
 }
 
 function extractTags(lines: string[]): string[] {
@@ -41,7 +44,7 @@ export function parsePost(filename: string, raw: string): BlogPost {
   return {
     slug,
     title: extractTitle(lines, slug),
-    date: extractDate(lines),
+    date: extractDate(lines) ?? '未标注',
     tags: extractTags(lines),
     excerpt: extractExcerpt(lines, raw),
     content: raw,

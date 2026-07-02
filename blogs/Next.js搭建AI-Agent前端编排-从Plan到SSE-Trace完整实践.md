@@ -1,5 +1,6 @@
 # 用 Next.js 搭建 AI Agent 前端编排：从 Plan 到 SSE Trace 的完整实践
 
+> 发布日期：2026-06-22  
 > 基于 [Home Agent](https://github.com/jiaxiantao/home-agent) 项目的技术博客。\
 > 本文介绍如何用 Next.js 实现一条最小可用的 **Plan → Tool → Answer** Agent 循环，并通过 SSE 把每一步实时推送给前端，驱动编排 UI。
 

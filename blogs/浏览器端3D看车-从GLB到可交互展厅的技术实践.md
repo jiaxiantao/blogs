@@ -1,5 +1,6 @@
 # 浏览器端 3D 看车：从 GLB 到可交互展厅的技术实践
 
+> 发布日期：2026-06-22  
 > 本文基于开源项目 [3d-car-viewing](https://github.com/jiaxiantao/3d-car-viewing)，记录如何用 **Next.js + React Three Fiber + Three.js** 在浏览器中搭建一套可切换车型、可交互部件、可分享深链的 3D 看车体验。重点放在实现过程中的**重难点**与对应解法，而非 API 罗列。
 
 ***
