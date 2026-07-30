@@ -1,3 +1,5 @@
+<!-- post-id: bf4403b0ccec461b -->
+
 # Cursor 四模式选型指南：Ask / Plan / Agent / Debug 何时用哪个？
 
 > 发布日期：2026-07-06  

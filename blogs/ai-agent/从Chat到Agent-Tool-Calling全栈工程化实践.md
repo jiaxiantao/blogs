@@ -1,3 +1,5 @@
+<!-- post-id: 130062b330e943ba -->
+
 # 从 Chat 到 Agent：Tool Calling 全栈工程化实践
 
 > 发布日期：2026-07-17  

@@ -1,3 +1,5 @@
+<!-- post-id: 2792f75ed6964c94 -->
+
 # Cursor Rules / Skills 分层设计：让 Agent 像「团队新同事」
 
 > 发布日期：2026-07-03  

@@ -32,11 +32,17 @@ pnpm preview
 ## 项目结构
 
 ```text
-blogs/                    # Markdown 文章（构建时自动加载）
+blogs/                      # Markdown 文章（按主题分子目录）
+  ai-agent/                 # AI Agent / Cursor / MCP
+  cos-design/               # cos-design 组件库
+  3d/                       # 浏览器 3D / Canvas
+  frontend/                 # 前端工程与趋势
 src/
   components/               # 布局、文章卡片、Markdown 渲染
-  constants/site.ts         # 站点名称、链接等配置
-  data/posts.ts             # 文章索引
+  constants/
+    site.ts                 # 站点名称、链接等配置
+    categories.ts           # 分类目录登记
+  data/posts.ts             # 文章索引（递归加载 blogs/**/*.md）
   lib/markdown.ts           # Markdown 解析与消毒
   pages/                    # 首页、文章详情页
   types/                    # 类型定义
@@ -44,24 +50,61 @@ src/
 .github/workflows/          # GitHub Actions 部署配置
 ```
 
-## 如何发布新文章
+## 文章分类
 
-1. 在 `blogs/` 目录新建 `.md` 文件（文件名即 URL slug）
-2. 文章开头建议包含标题与元信息：
+| 目录 | 展示名 | 说明 |
+|------|--------|------|
+| `blogs/ai-agent/` | AI Agent | Tool Calling、MCP、Context Engineering、Cursor |
+| `blogs/cos-design/` | cos-design | 视觉特效组件库实践 |
+| `blogs/3d/` | 3D 可视化 | 浏览器 3D、Canvas、仓储可视化 |
+| `blogs/frontend/` | 前端工程 | 前端趋势与工程实践 |
+
+- 新增分类：创建目录 `blogs/<category-id>/`，并在 `src/constants/categories.ts` 登记
+- **文件名仍需全局唯一**（用于旧链接兼容）
+
+## 文章编号与 URL
+
+每篇文章有稳定唯一的 ID（UUID v4 去掉连字符后截取前 16 位），站点内链接一律使用它。  
+ID 写在 Markdown **HTML 注释**中，页面不会展示：
 
 ```markdown
+<!-- post-id: 577666966ba346cb -->
+
 # 文章标题
 
-> 发布日期：2026-07-02  
+> 发布日期：2026-07-02
 > 标签：前端 / Cursor / AI 编程
 
 ## 正文从这里开始
 ```
 
+| 类型 | 示例 | 行为 |
+|------|------|------|
+| 规范链接 | `/post/577666966ba346cb` | 首页、站内跳转默认使用 |
+| 旧链接兼容 | `/post/Context-Engineering-从Prompt到Agent上下文系统` | 仍可打开，并自动跳到规范 ID |
+
+规则：
+
+- 格式固定为 16 位小写十六进制
+- **全局唯一**，且不要随文件名改动而变更
+- 若缺少 ID，系统会临时回退到文件名（不推荐上线）
+
+可运行以下命令为所有缺少编号的文章自动补齐，并把旧的 `> 文章编号：` 迁移为注释：
+
+```bash
+pnpm posts:assign-ids
+```
+
+该命令不会修改已有合法注释 ID。
+
+## 如何发布新文章
+
+1. 在对应分类目录新建 `.md` 文件
+2. 填写 `文章编号`、发布日期与标签（见上）
 3. 提交并推送到 `main` 分支，GitHub Actions 会自动构建并部署
 
 ```bash
-git add blogs/你的新文章.md
+git add blogs/ai-agent/你的新文章.md
 git commit -m "新增文章：xxx"
 git push origin main
 ```
@@ -77,15 +120,6 @@ git push origin main
 ```text
 pnpm install → pnpm build → 上传 dist/ → 发布到 GitHub Pages
 ```
-
-## 文章系列
-
-| 主题 | 代表文章 |
-|------|---------|
-| AI 工程实践 | Cursor 使用复盘、MCP 工作流、Code Review 指南 |
-| 职业成长 | 不可替代竞争力、转型 AI Agent 工程师 |
-| 3D 可视化 | 快递仓储可视化、浏览器端 3D 看车 |
-| 开源项目 | cos-design 组件库、Home Agent 前端编排 |
 
 ## License
 

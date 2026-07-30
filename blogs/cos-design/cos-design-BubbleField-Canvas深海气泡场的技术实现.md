@@ -1,3 +1,5 @@
+<!-- post-id: ef624d3ba560423b -->
+
 # cos-design BubbleField：用 Canvas 做一个「会呼吸」的深海气泡场
 
 > 发布日期：2026-07-28\

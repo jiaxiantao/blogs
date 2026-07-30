@@ -1,3 +1,5 @@
+<!-- post-id: 08fde143e26843cd -->
+
 # 从 Tool Calling 到 MCP Server：把业务能力做成 Agent 可复用接口
 
 > 发布日期：2026-07-21  

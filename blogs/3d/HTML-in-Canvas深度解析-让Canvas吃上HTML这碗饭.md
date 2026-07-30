@@ -1,3 +1,5 @@
+<!-- post-id: 6d04dd9d460248df -->
+
 # 🎨 HTML-in-Canvas 深度解析：让 Canvas 真正「吃上」HTML 这碗饭
 
 > 发布日期：2026-06-25  

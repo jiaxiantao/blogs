@@ -1,3 +1,5 @@
+<!-- post-id: 2ef3989533f7403d -->
+
 # cos-design RippleWater & SmokeFog：水面涟漪与烟雾雾气怎么做
 
 > 发布日期：2026-07-24\

@@ -8,11 +8,16 @@ interface PostCardProps {
 }
 
 export function PostCard({ post }: PostCardProps) {
-  const postPath = getPostPath(post.slug);
+  const postPath = getPostPath(post.id);
 
   return (
     <article className="post-card">
-      <PostMeta date={post.date} tags={post.tags} maxTags={3} />
+      <PostMeta
+        date={post.date}
+        tags={post.tags}
+        categoryLabel={post.categoryLabel}
+        maxTags={3}
+      />
       <h2>
         <Link to={postPath}>{post.title}</Link>
       </h2>

@@ -1,3 +1,5 @@
+<!-- post-id: 175b51be71e64234 -->
+
 # 用 Next.js 搭建 AI Agent 前端编排：从 Plan 到 SSE Trace 的完整实践
 
 > 发布日期：2026-06-22  

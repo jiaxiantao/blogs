@@ -1,3 +1,5 @@
+<!-- post-id: acbc4062c27249f5 -->
+
 # cos-design WeatherBackground：用 Canvas 做一个「会变天」的背景引擎
 
 > 发布日期：2026-07-22\
