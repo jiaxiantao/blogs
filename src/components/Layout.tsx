@@ -1,4 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
+import { posts } from '../data/posts';
 import { SITE } from '../constants/site';
 
 export function Layout() {
@@ -31,7 +32,7 @@ export function Layout() {
       <footer className="site-footer">
         <div className="container">
           <p>
-            © {new Date().getFullYear()} {SITE.author} · 基于 Vite 构建 ·{' '}
+            © {new Date().getFullYear()} {SITE.author} · 已收录 {posts.length} 篇文章 · 基于 Vite 构建 ·{' '}
             <a href={SITE.links.repo} target="_blank" rel="noopener noreferrer">
               GitHub Pages
             </a>
