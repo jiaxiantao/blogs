@@ -14,10 +14,10 @@ export function Layout() {
             </span>
           </Link>
           <nav className="header-nav">
-            <a href={SITE.links.juejin} target="_blank" rel="noreferrer">
+            <a href={SITE.links.juejin} target="_blank" rel="noopener noreferrer">
               掘金
             </a>
-            <a href={SITE.links.github} target="_blank" rel="noreferrer">
+            <a href={SITE.links.github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
           </nav>
@@ -32,7 +32,7 @@ export function Layout() {
         <div className="container">
           <p>
             © {new Date().getFullYear()} {SITE.author} · 基于 Vite 构建 ·{' '}
-            <a href={SITE.links.repo} target="_blank" rel="noreferrer">
+            <a href={SITE.links.repo} target="_blank" rel="noopener noreferrer">
               GitHub Pages
             </a>
           </p>

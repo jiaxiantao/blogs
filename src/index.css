@@ -248,10 +248,45 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.post-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .post-header h1 {
   margin: 0;
   font-size: clamp(30px, 4vw, 42px);
   line-height: 1.25;
+}
+
+.copy-link-btn {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.copy-link-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.empty-state {
+  margin: 0;
+  padding: 32px;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  text-align: center;
+  color: var(--muted);
 }
 
 .not-found {
@@ -270,6 +305,7 @@ a:hover {
   line-height: 1.35;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
+  scroll-margin-top: 80px;
 }
 
 .markdown-body h1 {
@@ -349,5 +385,14 @@ a:hover {
   .hero,
   .post-card {
     padding: 20px;
+  }
+
+  .post-header-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .copy-link-btn {
+    align-self: flex-start;
   }
 }
