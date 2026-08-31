@@ -13,7 +13,7 @@
 
 ***
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/8089f84dfb2c45179d717cb8ce5bc545~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563546&x-orig-sign=4XxjQEmXucD66GAoY2I4Itjpb0k%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cursor-copilot/01.webp)
 
 ## 一、为什么前端工程师特别适合 Cursor？
 
@@ -264,7 +264,7 @@ MCP 不是炫技，是 **把 Context 从人脑搬到工具链**。
 
 一年后，我形成了一套稳定的心智模型：
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/6100a4dde6304e1784383a00c483b1c8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563546&x-orig-sign=BVdpMftgbBn7TVkAyc%2B59mhAWtE%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cursor-copilot/02.webp)
 
 | 模式         | 我会什么时候用               | 不会什么时候用      |
 | ---------- | --------------------- | ------------ |

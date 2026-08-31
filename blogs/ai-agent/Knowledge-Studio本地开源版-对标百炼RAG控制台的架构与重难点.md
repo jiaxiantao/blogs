@@ -12,7 +12,7 @@
 
 我做了一个本地开源版 [Knowledge Studio](https://github.com/jiaxiantao/knowledge-studio)：同一套产品形态，技术栈换成 Next.js + PostgreSQL/pgvector + 本机 Ollama。目标不是替代云产品，而是把 RAG 控制台的**最小可运行切片**拆开——前端工程师也能读懂、改得动、讲得清。
 
-![ks-hero-cloud-vs-local.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/9955ed96e83043e3be2bb92824e30a20~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=hzSiKjqLw0zPZEUcy9VNjaDlGTA%3D)
+![ks-hero-cloud-vs-local.jpg](https://jiaxiantao.github.io/blogs/images/knowledge-studio/ks-hero-cloud-vs-local.jpg)
 
 > 🎭 *左边：云端把链路收进按钮。右边：本地把解析、向量、问答全部摊开——这篇讲的就是右边那条白盒。*
 
@@ -41,7 +41,7 @@
 | `/retrieval` | 知识检索   | 多库联合向量试跑，暴露 latency / minScore / hitCount |
 | `/assistant` | 知识问答   | 多库联合召回 + SSE 流式（思维链 → 结论）+ 引用与置信度         |
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/550cd740074045458b8f9baa253488a0~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=PD%2BuMBxnEBbcMrp1Vod4Uos7X2w%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/02.webp)
 
 ***
 
@@ -49,11 +49,11 @@
 
 本地版刻意做成「可拆开看的单体」：UI、API、解析、向量写入、问答编排都在同一个 Next.js 进程里。
 
-![ks-architecture-pipeline.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/79522e2b1b0e4689a77069fd3252a33c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=fZfED%2Bm2aDvk3gEaQG7yfkkOHs8%3D)
+![ks-architecture-pipeline.jpg](https://jiaxiantao.github.io/blogs/images/knowledge-studio/ks-architecture-pipeline.jpg)
 
 > 🎭 *Console → API 再分叉到入库 / 检索 / 问答；底下一层是 Postgres+pgvector 与本机 Ollama。*
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a8707cef1c54432696261cf391db6020~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=5uwlVLLUlg0rGSf%2BqMxo%2BhB%2Fe20%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/04.webp)
 
 和云端对照一下数据流就更清楚：
 
@@ -95,9 +95,9 @@ return NextResponse.json({ document }, { status: 201 });
 
 这和云端「异步建索引」产品体验一致，但实现差一个量级：本地是**进程内内存去重**（`ingestInFlight` Set），不是 durable job queue。单机够用；多副本 / 重启中途会丢任务——这是诚实边界，不是「也算生产级调度」。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2bb23888bbe54e91bdc0e15a0f7d7069~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=4T5Js2R%2BaWp4NW6e46yp4Yg%2BEqY%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/05.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/041c75bc031c4cdebb67c09b9c84d106~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=NoTpRTSV7yDdWBIQXM1xqWRAXbo%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/06.webp)
 
 ### 2. 多格式解析：对标上传矩阵，而不是只做 ChatPDF
 
@@ -112,7 +112,7 @@ return NextResponse.json({ document }, { status: 201 });
 
 解析路由大致是：docx→mammoth，表格→xlsx，老式 office→officeparser，html 去标签，图片直接 OCR。PDF 先走 `pdf-parse` 抽文字层。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/35cebff99866463f9e0fe701a86552e1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=uAPo9pf1cp8CM72VIM7urczTw6A%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/01.webp)
 
 ### 3. 扫描件 PDF：文字层为空时才上 OCR
 
@@ -130,7 +130,7 @@ OCR 有页数上限、渲染倍率、语言包配置（`PDF_OCR_*`）。识别�
 
 云端用 DocMind 一类托管解析，你几乎感觉不到这一刀。本地做一遍，才知道「支持 PDF」四个字后面有多少分支。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/4960df87730d44ddbdc03cb505579565~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=2nKGH9p7W9kPEZwpmnFqhKR5slA%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/02.webp)
 
 ### 4. 切片：段落优先，固定窗口 + 重叠
 
@@ -138,7 +138,7 @@ OCR 有页数上限、渲染倍率、语言包配置（`PDF_OCR_*`）。识别�
 
 百炼侧切片策略偏托管/智能切；本地刻意保持**可读、可调、可解释**的规则切片，方便演示「改 chunk 大小会怎样」。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ca40ec1ef51045caa6afdbfcc80a25ef~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=oJ42SvSRpLfM6eqVXyT6MsslwVA%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/03.webp)
 
 ### 5. Embedding：聊天走 `/v1`，向量走原生 API
 
@@ -165,7 +165,7 @@ ORDER BY c.embedding <=> $1::vector
 
 检索工作台刻意**只保留真参数**（query / topK / minScore / 多库），假开关（路由模式、假权重等）已拆掉——演示产品最忌 UI 假装有能力。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2e847f6151e246a0a7fe9a3e4a91c8f9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=HhH5i%2F4BpcIZBo1AkCNTh3IlfKY%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/04.webp)
 
 ### 7. 问答：先引用、再流式、真多轮
 
@@ -186,11 +186,11 @@ System Prompt 有一条产品级决策，和很多「没召回就拒答」的 De
 
 输出强制 `<thinking>` / `<conclusion>` 标签，前端边流边拆「推理 / 结论」两栏。解析器容忍半截标签和纯文本回退。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/4579620cefb54345b6110c21aacd2acc~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=0yK6s1Q6jlKBlSEamnyOtC3kb5k%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/05.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/da4d644b4ad04a749e8dbc7e6fd9699a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=aDyXuEhpFvhctQVXIiiLrAB6Fbo%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/06.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/6a33df765c0a43c895e0cda2370917aa~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=wmBY4rJAxQs5hcCIlxTMHNH3f1Y%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/07.webp)
 
 ***
 
@@ -247,7 +247,7 @@ ORM 不认 `vector`。方案是 schema 标 `Unsupported`，业务层 raw SQL 读
 
 先对齐「比的是谁」：百炼 **Knowledge Studio** 是 SaaS 化知识库 / RAG 控制台（管理、检索、问答、对外 API/MCP 等）；底层知识存储常见组合是 **OSS + 解析流水线 + Tablestore 向量/全文索引**。PAI **LangStudio** 是另一条线（Agent 工作流编排），别混成一个产品。
 
-![ks-tradeoffs-board.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c03101eb8d2847778874d4939845dcf6~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=83tvN4hkc3UKaQjMJjZVzYJulrw%3D)
+![ks-tradeoffs-board.jpg](https://jiaxiantao.github.io/blogs/images/knowledge-studio/ks-tradeoffs-board.jpg)
 
 > 🎭 *云端买的是运维、混合检索与规模；本地买的是白盒、可控成本与工程判断力。*
 
@@ -266,7 +266,7 @@ ORM 不认 `vector`。方案是 schema 标 `Unsupported`，业务层 raw SQL 读
 | 对外集成   | API / MCP / CLI / 应用发布     | 同源 REST + SSE；分享只读页    |
 | 你买到的   | 运维、解析质量、混合检索、合规与规模         | 白盒、可控成本、可二次开发          |
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2c0b0520775044109564b9781a260bd8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=9892Rlo04jjzw7Fg4GpyvzkREpg%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/08.webp)
 
 ### 什么时候用云，什么时候用本地
 
@@ -287,7 +287,7 @@ ORM 不认 `vector`。方案是 schema 标 `Unsupported`，业务层 raw SQL 读
 3.  **切片可关检索**：`enabled=false` 清 embedding，内容还在——运营向能力，不只是 Demo。
 4.  **会话分支 JSON 落库**：分叉、分享链接、侧栏会话，接近「能演示的产品」而不是一次性 Chat。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c1c543f56c0b4f0d85d28211bbd46e05~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786601839&x-orig-sign=RvtCkBjr1hfVCRwLZ%2FJjUvUnPv0%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/09.webp)
 
 ***
 

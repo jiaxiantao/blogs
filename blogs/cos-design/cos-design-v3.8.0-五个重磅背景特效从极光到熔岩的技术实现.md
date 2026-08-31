@@ -29,15 +29,15 @@
 
 下面五张图，就是 Playground 里五个新组件的默认态——从肥皂泡到极光，一张比一张「不像 CSS 能做出来的」：
 
-![SoapBubbles 肥皂泡天空 — 虹彩薄膜缓缓上升](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/27430329d3de4c9399f2c34025120ef0~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788252584&x-orig-sign=2sjojk5mL%2F2bbbG2L%2FW2xpbZEaY%3D)
+![SoapBubbles 肥皂泡天空 — 虹彩薄膜缓缓上升](https://jiaxiantao.github.io/blogs/images/cos-design-v380/01-soapbubbles-肥皂泡天空-虹彩薄膜缓缓上升.webp)
 
-![DandelionField 蒲公英播种 — 多株绒球静立草坡](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/62bb24936d75486994ac53d4da0e1011~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788252620&x-orig-sign=0qQtBRxg1e2YzyNb%2B881w%2FzXASs%3D)
+![DandelionField 蒲公英播种 — 多株绒球静立草坡](https://jiaxiantao.github.io/blogs/images/cos-design-v380/02-dandelionfield-蒲公英播种-多株绒球静立草坡.webp)
 
-![LavaBubble 熔岩泡 — 暗红湖面随机闷胀](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c2aa4d9eb2c94786a61e00d84cab2655~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788252651&x-orig-sign=%2FLKFuhXTRtFJFp0W%2FlMpjRZ643s%3D)
+![LavaBubble 熔岩泡 — 暗红湖面随机闷胀](https://jiaxiantao.github.io/blogs/images/cos-design-v380/03-lavabubble-熔岩泡-暗红湖面随机闷胀.webp)
 
-![InkBloom 墨染清水 — 一盆尚浅的清水](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/24f3c6f5a86c4d27b56aee4310bf8092~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788252717&x-orig-sign=PCQasI%2B814rMoBerDn4SIXqF3zg%3D)
+![InkBloom 墨染清水 — 一盆尚浅的清水](https://jiaxiantao.github.io/blogs/images/cos-design-v380/04-inkbloom-墨染清水-一盆尚浅的清水.webp)
 
-![AuroraVeil 极光帷幕 — 星夜垂落光带](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/1448543998c14ac7b1b5f067d23e4249~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788252736&x-orig-sign=gVDKtsOHro8BV0rVP2kGBNK9iCY%3D)
+![AuroraVeil 极光帷幕 — 星夜垂落光带](https://jiaxiantao.github.io/blogs/images/cos-design-v380/05-auroraveil-极光帷幕-星夜垂落光带.webp)
 
 这五个组件不是「五种配色方案」，而是五种**介质模型**：
 
@@ -55,7 +55,7 @@
 
 v3.8.0 的第一个背景，我从最「轻」的开始：纯 Canvas 2D，没有场仿真，但要骗过眼睛——泡膜得泛虹彩，碰在一起得会融，戳破得溅水珠。
 
-![SoapBubbles 默认飘飞 — 不同深度的泡各有虹彩](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/88bf209fcc934c4e9755d97c9dd44922~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253077&x-orig-sign=u2poU6qMjs0PW1eUuKOs5cHnLTM%3D)
+![SoapBubbles 默认飘飞 — 不同深度的泡各有虹彩](https://jiaxiantao.github.io/blogs/images/cos-design-v380/06-soapbubbles-默认飘飞-不同深度的泡各有虹彩.webp)
 
 ### 它解决什么问题？
 
@@ -79,9 +79,9 @@ import { SoapBubbles } from '@cos-design/soap-bubbles';
 
 左：点击戳破，膜 fade 的同时水珠飞出。右：两泡靠近融合，颈部收缩成 metaball 连体。
 
-<img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/da3d01a102b24bc0881dd96d481c6641~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788252829&x-orig-sign=sfL1%2FCZ0WBhPqLafe5%2BFFgxRBMM%3D" alt="SoapBubbles 点击爆裂" width="45%" />
+<img src="https://jiaxiantao.github.io/blogs/images/cos-design-v380/14.webp" alt="SoapBubbles 点击爆裂" width="45%" />
 
-<img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/70522fd0509c466482bf20e2c09a263c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788252849&x-orig-sign=pc5hvf25wFY8nizQMcq3Aao8X5c%3D" alt="SoapBubbles 双泡融合" width="45%" />
+<img src="https://jiaxiantao.github.io/blogs/images/cos-design-v380/15.webp" alt="SoapBubbles 双泡融合" width="45%" />
 
 **一句话带走**：虹彩来自薄膜厚度插值，灵魂在 merge 状态机——体积守恒 + metaball 绘制。
 
@@ -93,7 +93,7 @@ import { SoapBubbles } from '@cos-design/soap-bubbles';
 
 肥皂泡是「死物物理」；第二个组件我想做**活物逻辑**——不是粒子往上飘，而是一株株蒲公英真的在长高、开花、变绒球、被风吹散、再发芽。Playground 里等 intro 动画播完，你会看到草坡上一片 mature 绒球，那就是最佳阅读起点。
 
-![DandelionField 成熟态 — 多株绒球静立草坡](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ac528964215b42e9a447752c9f90bc4f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253046&x-orig-sign=42a2aVcb55rGYu0zg078f5CPJCM%3D)
+![DandelionField 成熟态 — 多株绒球静立草坡](https://jiaxiantao.github.io/blogs/images/cos-design-v380/07-dandelionfield-成熟态-多株绒球静立草坡.webp)
 
 ### 它解决什么问题？
 
@@ -127,9 +127,9 @@ import { DandelionField } from '@cos-design/dandelion-field';
 
 左：快速划过绒球，风场加速散种。右：点击整朵炸开，种子刚离体的一瞬。
 
-<img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b5e2390bd81348eea5257b1867b6729b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253119&x-orig-sign=S49uMKqqJ1SVKz2ZeJJ0eF8IlEg%3D" alt="DandelionField 滑动吹风散种" width="30%" />
+<img src="https://jiaxiantao.github.io/blogs/images/cos-design-v380/07.webp" alt="DandelionField 滑动吹风散种" width="30%" />
 
-<img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ddfdacb9117746cc8e2e81a77094980a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253169&x-orig-sign=LEN4ItkSvJXiBQdnhWLWAZ4PG0Y%3D" alt="DandelionField 点击炸开绒球" width="50%" />
+<img src="https://jiaxiantao.github.io/blogs/images/cos-design-v380/08.webp" alt="DandelionField 点击炸开绒球" width="50%" />
 
 **性能优化**（v3.8.0 重点）：`PlantFrameCache` 缓存 head/life 几何；`AttachedSeedTracker` 用计数器替代每帧 `filter` 附着种子——植株多时帧率更稳。
 
@@ -143,7 +143,7 @@ import { DandelionField } from '@cos-design/dandelion-field';
 
 前两个都是 Canvas 2D。第三个我想做「硬介质」——熔岩湖。难点不在颜色渐变，而在**完整事件链**：鼓起 → 变薄 → 闷裂 → 空腔 → 回填，还要能点击、能拖拽撕裂。这是五个组件里唯一上了 WebGL 的。
 
-![LavaBubble 自动鼓泡 — 湖面随机闷胀](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/40d081107e534f0ebde734963d99c083~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253233&x-orig-sign=ogLbwF0xT0MqjQAaUWOwGhobntI%3D)
+![LavaBubble 自动鼓泡 — 湖面随机闷胀](https://jiaxiantao.github.io/blogs/images/cos-design-v380/01-lavabubble-自动鼓泡-湖面随机闷胀.webp)
 
 ### 它解决什么问题？
 
@@ -184,9 +184,9 @@ import { LavaBubble } from '@cos-design/lava-bubble';
 
 左：点击后 burst 相，空腔 + 溅射热纹。右：壳层隆起、裂纹发热的 thin 阶段。
 
-<img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/13097278587e444fb4a83fcfefb495ad~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253303&x-orig-sign=PwRjHvbeHwCTGSKx%2BC8wHo0Hp2o%3D" alt="LavaBubble 点击爆裂" width="50%" />
+<img src="https://jiaxiantao.github.io/blogs/images/cos-design-v380/09.webp" alt="LavaBubble 点击爆裂" width="50%" />
 
-<img src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/24d27d7e3f134b0a913504eebce8c569~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253285&x-orig-sign=EHkJpKLXVUIg8u6m2ceUF234C5I%3D" alt="LavaBubble 壳层隆起" width="40%" />
+<img src="https://jiaxiantao.github.io/blogs/images/cos-design-v380/10.webp" alt="LavaBubble 壳层隆起" width="40%" />
 
 **为什么 CPU + GPU 分工？** 气泡生命周期、溅射粒子（mist/bomb/crust 三类 spatter）、热扩散需要随机性和分支逻辑，放 CPU 更直观；全屏像素着色交给 GPU，192² 纹理足够表达「湖面的起伏与裂口」。
 
@@ -200,7 +200,7 @@ import { LavaBubble } from '@cos-design/lava-bubble';
 
 熔岩是「硬壳 + 碎裂」；第四个我想做完全相反的质感——**软、慢、会累积**。墨水滴进清水，溶开后整盆水越来越深——这种「越摸越深」的反馈，blur 圆叠不出来。
 
-![InkBloom 刚滴墨 — 浓墨心 + 羽状外晕](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/26bc0078ea434495b70c52035429fef1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253371&x-orig-sign=nXsMyHCc3ne3vVzoqk%2BoeOeOPs0%3D)
+![InkBloom 刚滴墨 — 浓墨心 + 羽状外晕](https://jiaxiantao.github.io/blogs/images/cos-design-v380/02-inkbloom-刚滴墨-浓墨心-羽状外晕.webp)
 
 ### 它解决什么问题？
 
@@ -245,9 +245,9 @@ import { InkBloom } from '@cos-design/ink-bloom';
 
 上：单点滴墨，羽状晕开。下：连续多点后，整片清水被染深——注意背景色已从浅蓝变成深灰。
 
-![InkBloom 单点扩散 — 絮状细丝](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0f67fce0c76e43deb205d5123f8f3681~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253417&x-orig-sign=yLLprNW0qR3SCk581vH01yhjH%2BQ%3D)
+![InkBloom 单点扩散 — 絮状细丝](https://jiaxiantao.github.io/blogs/images/cos-design-v380/03-inkbloom-单点扩散-絮状细丝.webp)
 
-![InkBloom 多点染深 — 整盆水变深](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b60a44b4ee824eec8f66e8a8be31a59d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253446&x-orig-sign=SpoSPkMvTqs0ad7V3rLIifibPdo%3D)
+![InkBloom 多点染深 — 整盆水变深](https://jiaxiantao.github.io/blogs/images/cos-design-v380/04-inkbloom-多点染深-整盆水变深.webp)
 
 **一句话带走**：`dens` 是悬浮墨团，`stain` 是已溶入水的永久染色——质量守恒，越点越深。
 
@@ -259,7 +259,7 @@ import { InkBloom } from '@cos-design/ink-bloom';
 
 五个里最后做、也最「登页面」的一个。极光背景烂大街，但多数要么像壁纸、要么 shader 调参劝退。我想用纯 Canvas 2D 做出**光带能被鼠标弯曲、点击能爆发脉冲**的北极夜——不引 WebGL，但要够「哇」。
 
-![AuroraVeil 默认态 — 星夜 + 多层垂落光带](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/24ac527592fb4e25a65bc1a3d605e44c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253469&x-orig-sign=%2BmJPaT%2BBvWa4eqAXwTfqVEf3c4E%3D)
+![AuroraVeil 默认态 — 星夜 + 多层垂落光带](https://jiaxiantao.github.io/blogs/images/cos-design-v380/05-auroraveil-默认态-星夜-多层垂落光带.webp)
 
 ### 它解决什么问题？
 
@@ -292,7 +292,7 @@ import { AuroraVeil } from '@cos-design/aurora-veil';
 <AuroraVeil fill colors={['#7ee8d8', '#4cc9f0', '#9d8df1']} bandCount={5} speed={1} />
 ```
 
-![AuroraVeil 点击脉冲 — 光带爆发能量波纹](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/4f164b166345449a8131b6b8f2005632~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1788253493&x-orig-sign=nj5R8Ly0CWjeFpYjI2nFJdikBAI%3D)
+![AuroraVeil 点击脉冲 — 光带爆发能量波纹](https://jiaxiantao.github.io/blogs/images/cos-design-v380/06-auroraveil-点击脉冲-光带爆发能量波纹.webp)
 
 **工程细节**：`MAX_DPR = 2`；`prefers-reduced-motion` 时 stars 停止 twinkle、光带冻结；与 BubbleField 一样走 `@cos-design/shared` 的 `useCanvasBox`。
 

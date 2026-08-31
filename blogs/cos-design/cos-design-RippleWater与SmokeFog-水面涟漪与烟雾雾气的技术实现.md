@@ -29,9 +29,9 @@
 
 ## 效果预览
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d8aa1893a5c7463c8d535b9a5a301795~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=1Zd2qQfseBOFmAHUx8gqXTFUgTE%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/01.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/fca5ee9a24654a2c941569489e0c3fa5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=eoyEVmru9aHvMNwRkOkVY%2Fz9TK8%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/02.webp)
 
 ***
 
@@ -113,9 +113,9 @@ const ring = Math.exp(-Math.pow(dist - r * 0.55, 2) * 0.9);
 curr[y * SIM + x] += strength * (center + ring * 1.1);
 ```
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/584595ae092f45299ec0f2d63f755f4c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=w1gSpTpgCckwYqhjIYrg7ZxaaU4%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/03.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/8873303d706d47df856ed73199d0cd45~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=uyhuM5iFwgeZw5whsd0japFWt68%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/04.webp)
 
 ### 2.4 关键算法②：片段着色里的「像水」
 
@@ -140,9 +140,9 @@ float ambientH(vec2 p, float t) {
 
 高光侧用 `step(0.992, glitter)` 做硬阈值，只在法线几乎对准观察方向时爆亮——这是「波光粼粼」比单纯 `pow(spec, N)` 更脆的原因。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/cc22bf49730a46a696d525bb4b0049d5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=aZzC%2BsY8OAbXTn%2BdU9izkHg%2BB7c%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/05.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/eb5ceafa39b242e0a7ce7e0521a34dd6~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=5rHs%2FVtLBs1aIMLGS8u%2BSKGiRFQ%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/06.webp)
 
 ### 2.5 性能与可访问性
 
@@ -196,9 +196,9 @@ density *= 0.55 + n * 0.7;
 
 运行时只 `drawImage` + 旋转 / 拉伸，帧成本与「实时噪声流体」完全不在一个量级。`color` 变更时会重建贴图池，不必重启动画循环。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2c04773585374a6985005c55dd4600da~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=LSw%2F1gBbn2X5uSZyBivVTVeKc2s%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/07.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/dd85609bb7c14ddbb42fcbd42ec88641~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=qfxUbszwNl7DR3pJ5y2m6Dn05LI%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/08.webp)
 
 ### 3.4 关键算法②：只从底部升起
 
@@ -210,7 +210,7 @@ density *= 0.55 + n * 0.7;
 *   `heightDensity`：越高越淡；
 *   `globalCompositeOperation = 'screen'`：交叠处像体积光，而不是糊成一团灰。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c4f1e1d51b0e48af85455171c85059f9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=7WduAPuLZXz1Oz3S26gh63oKnpo%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/09.webp)
 
 ### 3.5 关键算法③：Gust 拨散（不是瞬间消失）
 
@@ -233,7 +233,7 @@ puff.opacity *= 1 - response * 0.028;
 
 同时最多约 4 个 Gust，防止连点把场景「吹穿」。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7b2bff1aa06f4dba8c5acbb42d36b29e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785482700&x-orig-sign=TgfqcKOjqIH5aDVh22YVAfQ6q6Q%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-ripple-smoke/10.webp)
 
 ### 3.6 性能要点
 

@@ -21,13 +21,13 @@
 2.  五个节点各自解决什么实战问题
 3.  跨 HTTP 的人在回路，在 LangGraph 里可以怎么取舍
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/65416022661e44afaaf6c76297a2d563~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787823931&x-orig-sign=0G%2BJtI7NwLHh3Q0HA5s8%2BqR3GaI%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/dfc-data-agent/01.webp)
 
 ***
 
 ## 开场：为什么是 LangGraph，而不是又一个 Agent while
 
-![dfc-hero-api-first.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/aa8598db79054bb0a93b43b638cdc85d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787823931&x-orig-sign=PfzLVRZW37AzcuL06mVelRqT%2BIk%3D)
+![dfc-hero-api-first.jpg](https://jiaxiantao.github.io/blogs/images/dfc-data-agent/dfc-hero-api-first.jpg)
 
 > 🎭 *左边：模型对着几十张表硬写 SQL。右边：LangGraph 编排「接口优先 → SQL 回退 → HITL」。*
 
@@ -60,7 +60,7 @@ LangGraph 在这里的价值不是「用了框架」，而是：**把控制环�
 
 > 🎭 *一张图：预取 → 规划 → 工具 → 挂起或合成。*
 
-![dfc-main-flow.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/874d130c334440fdbc53e11b6255c933~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787823931&x-orig-sign=f8aEayklD2x5pZBEvGzqJ9pJKdo%3D)
+![dfc-main-flow.jpg](https://jiaxiantao.github.io/blogs/images/dfc-data-agent/dfc-main-flow.jpg)
 
 ````
 
@@ -172,7 +172,7 @@ export async function preRetrieveApiRoute(question: string) {
 
 纯 schema 探索（「有哪些表」）直接跳过预检索——否则白花时间。结果注入上下文后，手机号那类问题，模型第一轮就能 `call_backend_api`。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c5e703a5e2e24fcbae39f96c9ec18162~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787823931&x-orig-sign=myM6yJ%2B0eBJBNrPqzwKWJlpy0do%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/dfc-data-agent/01.webp)
 
 ***
 
@@ -233,7 +233,7 @@ export async function preRetrieveApiRoute(question: string) {
 
 SQL 还要过只读 guard、表白名单、LIMIT、PII 脱敏。执行失败时有 `fixSqlFromExecutionError()`——常见事故是接口参数（如 `objCode`）被误写进 SQL。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/eec97da3d2394f76b6884a7950671be9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787823931&x-orig-sign=ma1lZQ1xL4vyO7evLuHspB613Mw%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/dfc-data-agent/02.webp)
 
 ***
 
@@ -255,7 +255,7 @@ emit(config, answerEvent({ text, mock, followUps }));
 
 还有一层常被忽略：Prompt **静态 / 动态分离**（长系统提示 vs 本轮问题上下文），方便兼容服务的 prefix caching——这不是图拓扑，但和「控制环省钱」是同一条产品线。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/8a3c7af4efc34c6a8b961724f147853c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787823931&x-orig-sign=8Hhp1Dhib2aXMfs10kSjCy7KQak%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/dfc-data-agent/03.webp)
 
 ***
 

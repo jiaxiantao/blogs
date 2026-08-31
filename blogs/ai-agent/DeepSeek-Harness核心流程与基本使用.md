@@ -26,7 +26,7 @@ clone 下来看一眼仓库，会改口。`packages/` 里不是「一个 loop + 
 
 ## 开场：Harness 不是聊天框，是可拆的马具
 
-![dsh-hero-plugin-tree.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/fc6f1badc38f48c08bb023d37431c115~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787907524&x-orig-sign=PiZlGtb%2BADFwX%2BJ55l2AXPii6Fw%3D)
+![dsh-hero-plugin-tree.jpg](https://jiaxiantao.github.io/blogs/images/deepseek-harness/dsh-hero-plugin-tree.jpg)
 
 > 🎭 *左边：一根缠死的循环。右边：session / tools / llm / loop 各自是可拔插的插件卡。*
 
@@ -75,11 +75,11 @@ pnpm dsh web
 
 Agent 可以读改文件、跑命令、委派子任务、维护计划。当前权限策略要求审批时，Web UI 会先问你。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/1951f72959c74ec7b3564b677a194090~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787907524&x-orig-sign=ryBUDTh1uvoG%2FpLJzSXOIoGzswM%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/deepseek-harness/02.webp)
 
 密钥是只写的，落在 `$DSH_HOME/.credentials.yaml`，设置页只保留凭据引用。Anthropic / OpenAI 以及公司网关，走「添加提供方 / 自定义提供方」；自定义要给永久 Provider ID、base URL、协议和至少一个模型。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/24b667a05ba04cf2ad0754a87cf66f0b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787907524&x-orig-sign=h0rUouvCEYESNXy53iFnTYUXi5g%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/deepseek-harness/03.webp)
 不想开浏览器时，用 **headless**：跑一个全新持久化会话，打印最终答案就退出——
 
 ```sh
@@ -137,7 +137,7 @@ pnpm dsh --profile web --dump-config
 
 ## 第三幕：一句话进去之后——turn 与 step
 
-![dsh-turn-step-loop.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/5cbdfcee9bc54c988626ddaac243694f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787907524&x-orig-sign=SsTVze1h5Lbe1TJ61zkmsI%2BmvI8%3D)
+![dsh-turn-step-loop.jpg](https://jiaxiantao.github.io/blogs/images/deepseek-harness/dsh-turn-step-loop.jpg)
 
 > 🎭 *TURN → CLAIM → PRE-STEP → LLM → TOOLS → TURN END；旁边那卷纸是只追加的 session log。*
 
@@ -187,9 +187,9 @@ turn/end
 
 所以你不能偷偷往 prompt 里塞一段「只有内存知道」的话。新的模型可见输入，就要新增一种 session 事件。Fork、resume、transcript、遥测，全部从同一条只追加日志投影出来。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0cf8e921c24a413096c59c6465125c34~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787907524&x-orig-sign=xwP%2FRE9CmngAeYp%2FSDeCmp5Ljb8%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/deepseek-harness/01.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/489300a196784edaaf21567b67bd78f1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1787907524&x-orig-sign=GXgohXqGKR51uYYLeP56fSC1BfQ%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/deepseek-harness/02.webp)
 
 ***
 

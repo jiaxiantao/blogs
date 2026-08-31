@@ -18,7 +18,7 @@
 
 ## 效果预览
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/70487ce7ee474bee8b15d1330a004b23~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=4cd%2BpVLBYgf3OPhtyIj9CROfqQ4%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/01.webp)
 
 ***
 
@@ -104,17 +104,17 @@ interface WeatherConfig {
 
 下面挑几组代表性场景（建议同尺寸截图，方便横向对比）：
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/6604d731be2b4e5bba96645aacb4fb9c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=XL5nqb%2BxsIojLhWAgDHDp2r53Fc%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/02.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/bf1cb7c791b248da955138c82d60adeb~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=fQ4d%2BF%2BULBqOXeq2%2BUIK%2F1SXAXY%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/03.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/886cb8e5db724d74a6e4a3b4f8a6bd14~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=BtiBHXILGnCPCH9TRTBlf2H4dow%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/04.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2e93746b163840bb8a98a723e9bbf8a3~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=Iw03GV1RRs8%2FiVN7iNmBhnt3FYQ%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/05.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/fded50f9d3154089bd9e05c74b045694~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=C5ddis8VFsPnpJm9e2Ne2AAUy2w%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/06.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/eb4f50c402cc475f84085fd967fc0e11~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=uH0y0g71FzTtwlKGVGikp3ClPVQ%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/07.webp)
 
 ***
 
@@ -146,7 +146,7 @@ const makeCrystalSprite = (radius: number): HTMLCanvasElement => {
 
 运行时只 `drawImage` 离屏精灵，避免每帧重画几何——这是性能上的关键取舍。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/604c7261f16c46fbaa06f6b937b3a316~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=r64n40PrAv4AU77HAkZ8N0G03Tw%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/08.webp)
 
 ### 4.2 中点位移分形闪电
 
@@ -168,7 +168,7 @@ const displaceBolt = (
 
 配合 `boltLife` 淡出与 `flashAlpha` 全屏闪白衰减，雷阵雨才有「劈一下、亮一下」的节奏，而不是一根常驻折线。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/e21e4be53b9740168478b554f9a55ca5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=AY57BnnX4TkhTK1PDi61HXKeXS0%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/09.webp)
 
 ### 4.3 轻量冰雹物理
 
@@ -181,7 +181,7 @@ const displaceBolt = (
 
 体量不大，但观感明显强于「白色圆点往下掉」。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d0e6ee168d9d4517b92839094d231f29~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=neS3JzIEmk%2FazJKFHBHx23HTxg0%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/10.webp)
 
 ### 4.4 其它值得一提的细节
 
@@ -230,7 +230,7 @@ WMO 码映射进组件语义类型。额外有一条产品规则：
 > 📸 **截图占位①**：开启「实况」+ 选中某城市，截取状态文案（含 WMO / 风速 / 日夜）。\
 > 📸 **截图占位②**：切换城市瞬间的「天气加载中…」遮罩（可选）。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c4ec8f5fb08942eb9fc8c1dcccd3d1ed~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785309745&x-orig-sign=xO362b6pPciO%2B1rErVIiZ1ruz9M%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-weather/11.webp)
 
 业务也可单独使用 hook：
 

@@ -20,7 +20,7 @@
 
 Home Agent 就是一个专门回答这些问题的 **学习型 Next.js 项目**。它不追求生产级 Agent 框架的完备性，而是把 **Agent 循环设计、SSE 流式协议、编排 UI 状态机** 三件事拆得足够清晰，方便阅读和二次扩展。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b09fbd1f98ed43a6a221ac5397de539b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=nNLVx8M5Rn364Ly3CHP3q4O%2FkbI%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/01.webp)
 
 ***
 
@@ -75,7 +75,7 @@ ollama serve
 
 `.env` 默认已配置 Ollama 的 OpenAI 兼容接口。若未配置 LLM 或设置 `LLM_DISABLED=1`，系统会自动回退到**规则规划器**——这在 CI 和离线学习场景下非常实用。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/81a8c7917f4c46b6a35f1bfb9b099fcd~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=9s597ZbPquqqm5LREaYEP69vdsE%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/02.webp)
 
 ***
 
@@ -165,7 +165,7 @@ if (wantsSearch && !hasTool("search_notes")) {
 *   CI 流水线不依赖外部 API，测试稳定可重复
 *   对比 LLM 规划与规则规划的行为差异，是学习 Agent 设计的捷径
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/01124c568d0449b4a389cff7aa1c9cb3~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=9VlVrcZrXHG6LMzybqmTeza4M7Q%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/03.webp)
 
 ***
 
@@ -229,7 +229,7 @@ curl -N -X POST http://localhost:3000/api/agent \
   -d '{"message":"计算 1+2"}'
 ```
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/35c026db72c94d8cb2b2c0c47ad0905b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=siTatymYis3DDeV7uGq%2FJwVo3bA%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/04.webp)
 
 ***
 
@@ -275,13 +275,13 @@ Hook 内部把原始 SSE 事件映射为人类可读的 Trace 行，例如：
 | `AgentFinalAnswer`          | 最终回答展示（含 mock 标记）    |
 | `IntelligenceLearningPanel` | 进阶：编排偏好与学习面板         |
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b87ac56cdb964525aa80bbe76216c1ff~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=QxgpQ7J4a2DTkDE%2FUk7M5DIC1ec%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/05.webp)
 
 ### 快捷 Prompt 与工具目录
 
 页面内置快捷按钮（`agent-quick-prompts.ts`）和工具目录展示（`tool-catalog.ts`），降低首次体验门槛。用户点一下「计算 100 \* 0.15 + 20」或「现在几点？」，就能立刻看到 Agent 循环的完整 trace。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d3ad0ea5b1ce4046aeae680ed90d3eef~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=%2Bsddfxfkgvf0kuE3rxWFM%2BEwqgM%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/06.webp)
 
 ***
 
@@ -301,7 +301,7 @@ Hook 内部把原始 SSE 事件映射为人类可读的 Trace 行，例如：
 
 `calculate` 工具则通过字符白名单 + `new Function` 做受限求值——**学习项目可以这么写，生产环境需要沙箱方案**。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/dfbbc12d9eb44cfb9ed7dc35f49f641e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=AzdWt4lqRkgfUlYtCW4HEfz05Bw%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/07.webp)
 
 ***
 
@@ -315,7 +315,7 @@ Hook 内部把原始 SSE 事件映射为人类可读的 Trace 行，例如：
 
 这是**可选进阶模块**，不影响 Agent 核心循环。但它展示了真实产品中常见的模式——**前端偏好 → prompt 增强 → Agent 行为微调**。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/991aa43c2795457ba22d2416ec030f8b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=icUbuu2ftnvYHLupAGXseIx87yc%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/08.webp)
 
 ***
 
@@ -431,7 +431,7 @@ pnpm install && cp .env.example .env
 docker compose up -d db && pnpm db:setup && pnpm dev
 ```
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/9b921387a9784c7980ef44d17aadc5e1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563762&x-orig-sign=ABrDlBYVss%2BLgbot96%2BKp%2Bb1N%2B0%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/nextjs-agent/09.webp)
 
 ***
 

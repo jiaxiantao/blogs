@@ -26,7 +26,7 @@
 
 ## 效果预览
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/8dff3712ab2f473fb1af0c819f681ef3~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=tlWYaXUaVK8K5YhG6hHJmmvTRLE%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/01-hero-god-view.webp)
 
 ***
 
@@ -43,7 +43,7 @@
 | 空间边界 | 无                                 | **木栅栏围合** + 走廊寻路                       |
 | 首屏体验 | 场景直出                              | **机器人 GLB 加载遮罩**                       |
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a5ea2854898d4d6fb3c50205c522afd1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=f452NukOv%2BHtVs9Nu4NWNbHdoVk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/02-upgrade-table-context.webp)
 
 ***
 
@@ -62,7 +62,7 @@
 
 核心逻辑集中在 `src/components/warehouse-robot.tsx` 的 `prepareRobotModel()`。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/578ec147899945519961df5eaf9c6a60~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=PhArVsoAZdKNwiiF71l8vM5l%2BCs%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/03-robot-third-person.webp)
 
 ### 1.2 驾驶输入：键盘、触屏、游戏式语义
 
@@ -138,11 +138,11 @@ export type RobotDriveState = {
 
 UI 切换：`warehouse-perspective-toggle.tsx`，底栏 `WarehouseQuickActions` 集成。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/aec2d680f8fc44b5a64aa254e4f108c5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=oeqFwhgVHprcSk0GYu7%2BD3r%2FOqA%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/04-god-view.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/1fb9765da270476981f6d86063af267b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=aiTQy10wxcAJ1rRAcAL%2B4RdVvIA%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/05-third-person.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c172506e4e3c41c0a2b65750918a394f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=t2f6MftN6U1Sd9SFzesuXWtoNds%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/06-first-person.webp)
 
 ***
 
@@ -186,7 +186,7 @@ export function getWarehouseFenceBounds() { /* ... */ }
 *   `warehouse-rack-category-label.ts` — 纹理绘制与世界坐标（法线朝 ±X，顶边与货架横梁齐平）
 *   `warehouse-rack-category-labels.tsx` — 场景挂载
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d13bd0d708514f5c85b72e727a1b5af8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=rFZbU6sOhkHRMj3QWjMPGQWEVl0%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/07-category-labels.webp)
 
 ### 4.2 模拟 SKU 按巷道归类
 
@@ -211,7 +211,7 @@ const product = pickProductForAisle(aisle, seed);
 
 货位面板可展示定位码，便于线下贴码与线上演示闭环。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/557ade4346b840cd88cd15653bf8d163~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563634&x-orig-sign=m49i4qrVtBnLG7JXTzuHa8ZNtV8%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/wms-3d-v2/08-scan-locate.webp)
 
 ***
 

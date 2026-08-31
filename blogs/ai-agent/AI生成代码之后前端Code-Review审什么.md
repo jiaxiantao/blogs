@@ -55,7 +55,7 @@ AI 生成代码之后，Code Review 的角色变了，但没有消失。
 
 记住一个原则：
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d81171489f4a4c9d8f809603c349b5bf~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563517&x-orig-sign=NVN6z8hqTk0UthjkWQt5SpQWSlA%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/ai-code-review/01-principle.svg)
 
 ***
 

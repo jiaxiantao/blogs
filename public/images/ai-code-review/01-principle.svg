@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <rect width="1200" height="400" fill="#0b1220"/>
+  <rect x="48" y="48" width="1104" height="304" rx="20" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+  <text x="600" y="170" fill="#e2e8f0" font-size="34" font-family="system-ui,sans-serif" text-anchor="middle">机器负责产出，人负责后果。</text>
+  <text x="600" y="240" fill="#94a3b8" font-size="24" font-family="system-ui,sans-serif" text-anchor="middle">格式 / Lint → CI · 业务 / 权限 / 安全 → 人审</text>
+</svg>

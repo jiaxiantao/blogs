@@ -24,7 +24,7 @@
 
 ## 系列到哪一步了
 
-![ks-day3-quality-gate.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a71411271fab444ba9903d1db08524a8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786937110&x-orig-sign=%2BtuqRqZnxhmyP3IUVi2zcJ7SiGw%3D)
+![ks-day3-quality-gate.jpg](https://jiaxiantao.github.io/blogs/images/knowledge-studio/ks-day3-quality-gate.jpg)
 
 > 🎭 *Day1 摊开链路；Day2 能登录、能调 API、能整包部署；Day3 用评测门禁和内网加固，把「感觉更好」变成「可回归、可给真人用」。*
 
@@ -44,7 +44,7 @@
 
 混合检索在 8 月 6 日就上了。今天补的是**前后两头**：入口的查询改写，出口的可选重排。
 
-![ks-retrieval-pipeline.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d2d7391de2e44f62a21df92ed5ee7393~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786937110&x-orig-sign=nq5GWOqDA%2B7xwtABavzHCsmsUSM%3D)
+![ks-retrieval-pipeline.jpg](https://jiaxiantao.github.io/blogs/images/knowledge-studio/ks-retrieval-pipeline.jpg)
 
 > 🎭 *问答与检索工作台走完整管线；评测故意走原始 `searchChunks`，避免改写把 Hit\@K「化妆」好看。*
 
@@ -74,7 +74,7 @@ const reranked = await maybeRerankChunks(originalQuery, results, { topK });
 1.  **改写用「检索向」查询，重排仍对照「用户原问」**——改写是为了召回，重排是为了相关性，别混成一个目标。
 2.  **开重排时先多召一批**（约 `topK * 3`，上限 40），再截断——否则 listwise 没有池子可排。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/5c4a6c24c4c445ed8df770f8e9bfaa2c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786937110&x-orig-sign=9YEZCxbQNVzVHOMt1AxYNKoL%2Bzw%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/03.webp)
 
 ### 为什么默认开改写、默认关重排？
 
@@ -110,9 +110,9 @@ RAG_EVAL_EMBED_STUB=1 pnpm eval:ci
 
 否则改写可能把「本该失败的短问」洗成好查的句子，门禁虚高。线上问答可以智能；回归基线必须诚实。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/393c8bf2dbc248cb917b07b15262910d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786937110&x-orig-sign=HFDmMEYSM1Z8IV%2F0Z6Gxxy3zihs%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/04.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/9494eb5e77934a48861f379cbd2c9ff7~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786937110&x-orig-sign=QKxfk5mqkhMBYC2WyiP7%2Bu%2FV93w%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/05.webp)
 
 这也和 Agent Eval 篇的最小闭环对齐：**case → 断言 → 门禁 → 失败回流**。RAG 这边至少先把「召回契约」钉死。
 
@@ -138,7 +138,7 @@ void recoverAndResumeStuckDocuments(20);
 
 仍不是生产调度——多副本抢同一文档、跨机器队列，以后再说。但\*\*「重启就丢任务」这条最扎心的坑，先堵上。\*\*
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/631a3ede2ba244dd97b1a6e6e2cac6e1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786937110&x-orig-sign=tIVjo8nd2%2B%2FihtAfD3qs35KbNj4%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/01.webp)
 
 ***
 
@@ -194,7 +194,7 @@ createHmac("sha256", AUTH_JWT_SECRET)
 
 登录 / 问答加基础限流；Next 补安全响应头；部署文档给 Caddy HTTPS 反代示例——内网也尽量别明文漂。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2b75f0fc25f64e5d87ae76988b6f6e0a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786937110&x-orig-sign=4z2nVxHDqex%2BUXiAWIn9SvZp7K4%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/02.webp)
 
 <http://localhost:3000/assistant/share?id=session-0819ee04-7a96-477c-97b6-690100109c95&t=C4NTm9Whm4ak3x981TXpW4d-kZg1z6f5>
 

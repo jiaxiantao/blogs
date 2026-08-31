@@ -38,33 +38,33 @@
 
 ## 二、效果预览
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/74ec1cc57b9e4f68ba9138b8f6589a37~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=fIapdOXTBrc2xw2pw8iAXySN4rE%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/01.webp)
 
 ### 2.1 主界面 — 整车 WebGL 展示
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0f030f6045054eccb194f7aa63df7919~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=pTyri0Jnmj42%2BUXlQpGS3hblF0E%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/02.webp)
 
 ### 2.2 车身交互 — 车门 / 灯光 / 车漆
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a4de369ae57f4b1993473a60680ee3f0~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=eJ7cejHkD%2BTblPG2EtZk95vhNTc%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/03.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/cdf4ef8851fd4579a445e48c558b2dd5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=SW90Bl7QFqo1tZCWnsivGn6wsKc%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/04.webp)
 
 ### 2.3 驾驶动态 — 启动 / 制动 / 环车巡检
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/939de2ab954e46688afbcce488cf01e2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=vNFxWPj1utxnF%2F7ccOBSSDF%2F7o4%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/05.webp)
 
 ### 2.4 多机位视角
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7c7c5122f6284951b958b1d1d721d98b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=1lvHeFK46ut9oavtUayK%2B54OLgU%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/06.webp)
 
 ### 2.5 场景模式切换
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/e87d04b41253489484fbf86a7c696805~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=MsKEcUgE4Kfa9zC03QyAYOo0fXs%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/07.webp)
 
 ### 2.6 开发调试 — GLB 部件识别面板
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a94a42ffa915448eaaf1e3ba03f0c37c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563799&x-orig-sign=JNQJNY3NShgrmnZ5Vq1JXo%2B0YRM%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/3d-car-showroom/08.webp)
 
 ***
 

@@ -18,7 +18,7 @@
 
 ## 效果预览
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/655b28e621bc485fa7296df2ba8457d5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=s1FVhW8XP1zQSqLRyCapxYLoSc0%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/01.webp)
 
 ***
 
@@ -86,7 +86,7 @@ export interface BubbleFieldProps {
 
 交互开启时底部提示是「海底气泡上升 · 划过扰动水流」；关掉则只保留氛围层。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/f70094ff1b2b47359395317f8917c802~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=gOzUUOh1fhZ8SZ%2F9y3g2gjqWaYk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/02.webp)
 
 ***
 
@@ -106,7 +106,7 @@ bubble.vy -= accel * frameScale;
 
 从海底 `spawn` 时，半径也有偏置——多数中小，偶尔偏大——场里才有主次。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0ab17842f8344c4e9a39e6c919719c4a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=CVDqWy2ZAInE8hkf8tvHVre3Gmc%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/03.webp)
 
 ***
 
@@ -137,11 +137,11 @@ const blobRadius = (bubble, angle, time) => {
 
 再旋转 / 压扁成 `Path2D`，叠径向渐变高光（光源约在右上）。这是 BubbleField「像果冻、像水下气泡」而不是「硬圆」的关键。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/6a89799a912540dd87bf63bdfc9657e1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=6bjcA80JgwEv2GMLE4lPdMiBLto%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/04.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/393f4cdeb64c403282a202994d32afbf~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=DE1RpsOAl696XR9mQXe9Bb95zDk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/05.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/4103273b8fb14d83a6e2da293fc4623b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=DZfDmw8CzRxaodk9FZhTu2ju7%2Bk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/06.webp)
 
 ***
 
@@ -186,7 +186,7 @@ metaballField = (ar*ar)/d1 + (br*br)/d2;
 
 Canvas 2D 上做双体 metaball，比 WebGL 等值面轻一个数量级，观感足够「融成一团」。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/024a7abe858b48ec9f8793ce51c81ed2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=XQw%2BTVm2sAcxKZq0PuLzz0a74s8%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/07.webp)
 
 ***
 
@@ -202,7 +202,7 @@ Canvas 2D 上做双体 metaball，比 WebGL 等值面轻一个数量级，观感
 
 气泡按 `y` 从深到浅排序绘制，远近叠压更自然。整体气质是「深海气泡场」，不是 UI 上的蓝色圆点雨。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2bf61ea6916045e8b21571f01f6f4fc2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1785809844&x-orig-sign=mjtfDbLhPlxZEMmfrb5pJ8AEk0o%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-bubble-field/08.webp)
 
 ***
 

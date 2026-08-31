@@ -12,7 +12,7 @@
 
 ***
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/004955f61ea04da58a68a4471d40d273~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563731&x-orig-sign=gi3qo%2BGI5%2BhSNw2dF4biX7Bq6bg%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-v3/01.webp)
 
 ## 一、这次升级意味着什么？
 

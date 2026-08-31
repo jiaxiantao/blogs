@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
-    "posts:assign-ids": "node scripts/assign-post-ids.mjs"
+    "posts:assign-ids": "node scripts/assign-post-ids.mjs",
+    "images:migrate-juejin": "node scripts/migrate-juejin-images.mjs",
+    "images:fallback-screenshots": "node scripts/screenshot-fallback-images.mjs"
   },
   "dependencies": {
     "dompurify": "^3.2.6",
@@ -21,6 +23,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
+    "playwright": "^1.62.1",
     "typescript": "~5.8.3",
     "vite": "^7.0.0"
   }

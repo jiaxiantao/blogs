@@ -18,9 +18,9 @@
 
 ## 效果预览
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7a5a5ed5a59946b19f89706a0d0b7136~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786076510&x-orig-sign=MyxrruHHUOWM82KuQLbJYL%2BfbEk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-photo-album/01.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/881f17879de140e290ead506561349eb~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786076510&x-orig-sign=bM%2BSbrizVAyQLcLxshjWjUk%2B2mo%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-photo-album/02.webp)
 
 ***
 
@@ -79,7 +79,7 @@ album（perspective）
 
 关键取舍：**铁圈不进 `book` 的 `preserve-3d`**。若铁圈和纸页在同一套 3D 空间里，翻页时环面会和纸面相交穿模。把铁圈放到 `album` 子级、用前后两半 `clip-path` + `z-index` 夹住翻页叶，几何上更稳。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0c544aee9b4d4961971cf7e9dec89898~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786076510&x-orig-sign=N6NeGxLFcyzdPSnjjJ4xyRVqZSg%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-photo-album/03.webp)
 
 ***
 
@@ -167,7 +167,7 @@ sheet.style.transform = flatTransform;
 // …再 rAF → visibility:hidden → setTurn(null)
 ```
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7c71da5a3ce546ada1b83fb813117797~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786076510&x-orig-sign=%2FJ2KDwFHbgzrUCT0fsgh939Plsk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-photo-album/04.webp)
 
 ***
 
@@ -203,7 +203,7 @@ perspective: 1400px;
 
 封面、纸叠厚度、中缝谷影、桌面投影叠在一起，才像桌上摊开的实体相册，而不是悬浮的两张卡片。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2b45be610e0842ecac14cdb3ca1f5922~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786076510&x-orig-sign=e7LRj6a8%2FuL%2BmOdx8dxWo5HyZOI%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-photo-album/05.webp)
 
 ***
 
@@ -285,9 +285,9 @@ export interface PhotoAlbumItem {
 
 调气质时优先动 `pageColor` / `coverColor` / `labels`；交互手感动 `pageTurnDuration`。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d8e357489a5145c2852b39c5e5aa045f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786076510&x-orig-sign=VIEQwQ%2B7RX0UvKFqnSAgJj1fw98%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-photo-album/06.webp)
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2ce4c94ff71c4be489ae7ebf00e19bea~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786076510&x-orig-sign=fDtbcGtSBcya7fMLiVkDj2mQcuY%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-photo-album/07.webp)
 
 ***
 

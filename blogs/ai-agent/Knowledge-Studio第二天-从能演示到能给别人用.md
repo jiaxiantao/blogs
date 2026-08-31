@@ -21,7 +21,7 @@
 
 ## 先建立直觉：Demo 和控制台之间差什么
 
-![ks-day2-demo-to-deploy.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0d82fdf6edef450e96dbb0fed8dc404e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786181635&x-orig-sign=hK0rzb9QX%2FqacTmyVDg1hMvHfK4%3D)
+![ks-day2-demo-to-deploy.jpg](https://jiaxiantao.github.io/blogs/images/knowledge-studio/ks-day2-demo-to-deploy.jpg)
 
 > 🎭 *左边：一个人本机跑通。右边：同事能登录、系统能调 API、机房能整包搬走。*
 
@@ -58,7 +58,7 @@
 未登录仍可浏览壳层；登录后只见本人数据。分享页 `/assistant/share?id=` 保持只读公开——这是刻意的「链接分享」例外。
 
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/6214f9fb0aab4e8a8c10c39510dae3dc~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786181706&x-orig-sign=CeLY2%2FPnH0LghmVxfNLLIvrfoe8%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/02.webp)
 
 ### 生产校验
 
@@ -74,7 +74,7 @@ Docker 全栈模式下，若 `AUTH_JWT_SECRET` 仍是 `change-me` 或太短，**
 
 ### 方案：双入口，一条核心
 
-![ks-dual-entry-api.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/32b2d84b0e814ba5a5d8f3608dff7021~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786181731&x-orig-sign=To%2Bp5YODWKgyFSRLIIwQ1C7HV70%3D)
+![ks-dual-entry-api.jpg](https://jiaxiantao.github.io/blogs/images/knowledge-studio/ks-dual-entry-api.jpg)
 
 > 🎭 *浏览器走 JWT，外部系统走 API Key；底下是同一套 `runChatAnswer`。*
 
@@ -116,10 +116,10 @@ curl -X POST 'http://localhost:3000/api/v1/apps/chat' \
 *   `/developer/playground` — 填 Key + 多选知识库，JSON / SSE 调试
 
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c4183a2ab7ef4d96805742c88ec1584a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786181764&x-orig-sign=aBtnMnbnTRLb1c%2F8eKpphPL6uew%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/04.webp)
 
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/220297f2b6d64365a49b3cff794afcb9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786181819&x-orig-sign=zPmXROpcEjCQsvQOA%2FMkPRk4%2ByQ%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/05.webp)
 
 这和百炼「控制台配置问答服务 → 发布 → API 集成」是同一产品节奏；差别是本地版第一版就给了 **Bearer Key + 限流 + 归属**，没有假装有 MCP/CLI（后续可加）。
 
@@ -174,7 +174,7 @@ NEXT_PUBLIC_SITE_URL=http://192.168.1.23:3000
 | `uploads-data`  | 上传原文件             |
 
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/f08d19fb3fcf467ab6c43b5a3d6e3c2f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786181893&x-orig-sign=UujBsg9BicGRNbUipHcl1TsAqtk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/01.webp)
 
 健康检查：`GET /api/health` — `ok` 表示库可用，`ready` 表示库 + Ollama 都可达。
 
@@ -232,7 +232,7 @@ async function* normalizeLlmStream(stream) {
 前端解析器（`parseAssistantAnswer`）负责「展示层容错」；**服务层还要做「协议层归一」**，否则 UI 再漂亮也会被空流坑。
 
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/9db22e69098847fe8727afd9ceac0393~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1786181930&x-orig-sign=LUtAOBTPtS2On3MMJ61Eqdq07r0%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/knowledge-studio/02.webp)
 
 ***
 

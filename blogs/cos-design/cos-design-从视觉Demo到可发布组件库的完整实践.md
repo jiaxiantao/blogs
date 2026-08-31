@@ -268,7 +268,7 @@ npx --yes pnpm@9 dev
 
 浏览器访问 `http://localhost:4000`，进入首页后点击卡片即可查看各个演示页。
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/1082040ca0534691ade9689090619ee3~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=bkmLDbMKxk%2B3cdL1zCmJjwXq0do%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/01-playground-home.webp)
 
 ### 常用脚本
 
@@ -369,7 +369,7 @@ npx --yes pnpm@9 dev
 *   适合浅色时钟主体 + 深色背景搭配
 *   若放在窄容器中，建议通过外层容器控制布局，不要单纯缩放 canvas
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/038f0abf25a4440496875d1baf13f50c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=SR9IJ%2FezfSbxqoBrNB45KYVBLnU%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/02-canvas-clock.webp)
 
 ***
 
@@ -397,7 +397,7 @@ npx --yes pnpm@9 dev
 *   背景建议使用纯黑或深色
 *   若你需要“真实进度”，可考虑未来在此基础上扩展受控模式
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/5510e054eed64304bd2340007654382a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=%2FMxzk0BS5eRkV6XmmT6KkAM%2Bci4%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/03-charge.webp)
 
 ***
 
@@ -425,7 +425,7 @@ npx --yes pnpm@9 dev
 *   适合与标题、按钮叠加构成主视觉
 *   如果后续做增强，可继续扩展亮度、光柱数量、颜色方案等参数
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/574e3a516b704ced83c1d7bba837c99b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=JXiXQ7BBUKTdU1rmQBWgzFbMJag%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/04-return-city.webp)
 
 ***
 
@@ -467,7 +467,7 @@ npx --yes pnpm@9 dev
 *   若接真实抽奖接口，推荐由服务端返回中奖索引，再控制最终停留结果
 *   当前默认更适合前台互动展示、活动页、内部 Demo
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2c57445064a94220add23d4ee81197e1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=xHHqhbPAwYr4D%2B7q1TYx2U5rgGs%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/05-turntable.webp)
 
 ***
 
@@ -498,7 +498,7 @@ npx --yes pnpm@9 dev
 *   可与 `Turntable` 联动：中奖后展示烟花
 *   若页面已有大量动态背景，烟花应只在关键节点触发
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ce5070c863bc4ce187af03600604f55d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=KP1z1fezgtmWoIvbFzfiEOM4yJo%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/06-fireworks.webp)
 
 ***
 
@@ -529,7 +529,7 @@ npx --yes pnpm@9 dev
 *   上层文字最好保持高对比度、居中和简短
 *   若是移动端，建议适当降低 density
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/84da31aceac14910a57e5b1faab54c5c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=J3LY1G66WW%2BcJ9QCUcEhyk%2FkMU8%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/07-matrix-rain.webp)
 
 ***
 
@@ -555,7 +555,7 @@ npx --yes pnpm@9 dev
 *   若作为背景层，前景内容建议控制在 1\~2 个主视觉元素内
 *   粒子数量不是越多越好，适当留白更有呼吸感
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c06e6f9d76f64267bd9025f1e2f548d8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=74Rcs3Th16RP6mb%2FRF6riU0laWE%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/08-particle-network.webp)
 
 ***
 
@@ -588,7 +588,7 @@ npx --yes pnpm@9 dev
 *   英文、短句、标语类文本效果最佳
 *   可与 `MatrixRain` 组合，形成完整赛博风首页
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/588ce9abd26c4794b5bd247f3429f136~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=iHov9n4PqeRi1n%2BMj7LdQh20Q8I%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/09-typewriter.webp)
 
 ***
 
@@ -613,7 +613,7 @@ npx --yes pnpm@9 dev
 *   用于标题、品牌名称、口号时最有冲击力
 *   与暗背景搭配时效果最好
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/32364d6454d94c3f865ad863c6328d5e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=5MzWYFwnJ1tawY13WZhAJprwDIQ%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/10-neon-text.webp)
 
 ***
 
@@ -637,7 +637,7 @@ npx --yes pnpm@9 dev
 *   可搭配 `Fireworks` 或 `Turntable` 形成“点击触发反馈”的完整交互链路
 *   CTA 文案建议直接、短小、有指向性
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/03d65fbfe5a643a88156b7a5a4422757~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg54mn6Im6:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMzk1ODY3MjgyMzY4Nzg4MCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1783563980&x-orig-sign=tNwN9bBmXoX9h6sekQQDBTEbPRk%3D)
+![image.png](https://jiaxiantao.github.io/blogs/images/cos-design-journey/11-wave-button.webp)
 
 ***
 
