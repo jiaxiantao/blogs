@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" role="img" aria-labelledby="ageTitle ageDesc">
+  <title id="ageTitle">美国软件开发者就业指数，分年龄一冷一热</title>
+  <desc id="ageDesc">以 2022 年 11 月为基期，到 2026 年 8 月，22 到 25 岁下降近两成，41 到 49 岁上升近两成。样本限于使用 ADP 发薪服务的美国企业。</desc>
+  <rect width="960" height="460" rx="18" fill="#f6f1e7"/>
+  <rect x="1" y="1" width="958" height="458" rx="18" fill="none" stroke="#e4dccb"/>
+  <text x="48" y="58" fill="#2c2a26" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="28" font-weight="700">同一份职业，冷热并不一样</text>
+  <text x="48" y="92" fill="#6f675c" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="16">美国软件开发者就业指数 · 相对 2022 年 11 月 · 截至 2026 年 8 月</text>
+  <line x1="500" y1="148" x2="500" y2="328" stroke="#2c2a26" stroke-width="1.5"/>
+  <text x="500" y="136" text-anchor="middle" fill="#6f675c" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="13">基期</text>
+  <text x="48" y="198" fill="#2c2a26" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="18" font-weight="650">22–25 岁</text>
+  <rect x="333" y="172" width="167" height="36" rx="8" fill="#3d6f8a"/>
+  <text x="321" y="196" text-anchor="end" fill="#3d6f8a" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="16" font-weight="700">下降近两成</text>
+  <text x="48" y="288" fill="#2c2a26" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="18" font-weight="650">41–49 岁</text>
+  <rect x="500" y="262" width="167" height="36" rx="8" fill="#c47b4a"/>
+  <text x="680" y="286" fill="#8a4e28" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="16" font-weight="700">上升近两成</text>
+  <text x="48" y="384" fill="#6f675c" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="14">来源：斯坦福数字经济实验室与 ADP 的就业指数，澎湃新闻 2026-10-24 转述。</text>
+  <text x="48" y="412" fill="#6f675c" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="14">样本限于使用 ADP 发薪服务的美国企业，不是全美普查，也不能全部算到 AI 头上。条的长度只表达「近两成」这个量级。</text>
+</svg>
